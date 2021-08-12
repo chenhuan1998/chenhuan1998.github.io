@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>利用CSS制作照片悬停效果</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			font-family: 'poppins',scan-serif;
+		}
+        body{
+        	display: flex;
+        	justify-content: center;
+        	align-items: center;
+        	background-color: #16384C;
+        }
+        .box{
+        	position: relative;
+        	width: 1100px;
+        	display: flex;
+        	justify-content: center;
+        	align-items: center;
+        	flex-wrap: wrap;
+        	padding: 30px;
+        }
+        .box .card{
+        	position: relative;
+        	max-width: 300px;
+        	height: 215px;
+        	background-color: #fff;
+        	margin: 30px 10px;
+        	padding: 20px 15px;
+        	display: flex;
+        	flex-direction: column;
+        	box-shadow: 0 5px  20px rgb(0,0,0,0.5);
+        	transition: 0.3s ease-in-out;
+        } 
+        .box .card .mg{
+        	position: relative;
+        	width: 260px;
+        	height: 260px;
+        	top: -60px;
+        	left: 20px;
+        	z-index: 1;
+        	box-shadow: 0 5px  20px rgb(0,0,0,0.5);
+        }
+        .box .card img{
+        	width: 100%;
+        	height: 100%;
+        	border-radius: 4px; 
+        }
+        .box .card:hover{
+        	height: 420px;
+        }
+          .box .card .content{
+             position: relative;
+             margin-top: -140px;
+             padding: 10px 15px;
+             text-align: center;
+             color: #111;
+             font-size: 18px;
+             visibility: hidden;
+             opacity: 0;
+             transition: 0.3s ease-in-out;
+           }
+            .box .card:hover .content{
+            	visibility: visible;
+            	opacity: 1;
+            	margin-top: -40px;
+            	transition-delay:0.3s; 
+            }
+	</style>
+</head>
+<body>
+  <div class="box">
+  	<div class="card">
+  		<div class="mg"><img src="img/32.jpg"></div>
+  		<div class="content">
+  			<h2>赵丽颖</h2>
+  			<p>赵丽颖长相甜美，身材纤细，小小的圆脸，满满的胶原蛋白，皮肤吹弹可破，一双炯炯有神的大眼睛。赵丽颖长相甜美，身材纤细，小小的圆脸，满满的胶原蛋白，皮肤吹弹可破，一双炯炯有神的大眼睛。</p>
+  		</div>
+  	</div>
+  	<div class="card">
+  		<div class="mg"><img src="img/29.jpg"></div>
+  		<div class="content">
+  			<h2>刘诗诗</h2>
+  			<p>刘诗诗，出生于北京市，毕业于北京舞蹈学院，中国内地影视女演员。长相甜美，身材纤细，小小的圆脸，满满的胶原蛋白，皮肤吹弹可破，一双炯炯有神的大眼睛。</p>
+  		</div>
+  	</div>
+  	<div class="card">
+  		<div class="mg"><img src="img/31.jpg"></div>
+  		<div class="content">
+  			<h2>邓紫棋</h2>
+  			<p>邓紫棋，出生于上海，毕业于香港演艺学院，中国香港女歌手。长相甜美，身材纤细，小小的圆脸，满满的胶原蛋白，皮肤吹弹可破，一双炯炯有神的大眼睛。</p>
+  		</div>
+  	</div>
+  </div>
+</body>
+</html>
